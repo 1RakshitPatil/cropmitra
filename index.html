@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Mitra - Smart Crop & Fertilizer Recommendations</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-seedling"></i>
+                <div>
+                    <h1>CropMitra</h1>
+                    <div class="tagline">Smart Farming</div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#advisor">Crop Advisor</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Optimize Your Farming with Smart Recommendations</h2>
+            <p>Get personalized crop and fertilizer suggestions based on your farm's unique conditions.</p>
+            <a href="#advisor" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Crop Mitra Works</h2>
+                <p>Analyzes multiple factors to provide the best recommendations</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tint"></i></div>
+                    <h3>Water Analysis</h3>
+                    <p>Recommends crops based on water availability.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Location Intelligence</h3>
+                    <p>Suggests crops suited to local climate.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-mountain"></i></div>
+                    <h3>Soil Assessment</h3>
+                    <p>Optimizes crop choice based on soil type.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-history"></i></div>
+                    <h3>Crop Rotation</h3>
+                    <p>Improves soil fertility using rotation logic.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section" id="advisor">
+        <div class="container">
+            <div class="section-title">
+                <h2>Crop Advisor</h2>
+                <p>Enter farm details to get recommendations</p>
+            </div>
+
+            <div class="form-container">
+                <form id="farmForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Water Availability</label>
+                            <select id="water" class="form-control" required>
+                                <option value="">Select</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" id="location" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Soil Type</label>
+                            <select id="soil" class="form-control" required>
+                                <option value="">Select</option>
+                                <option value="sandy">Sandy</option>
+                                <option value="clay">Clay</option>
+                                <option value="loamy">Loamy</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Previous Crop</label>
+                            <input type="text" id="previousCrop" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">Get Recommendations</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section" id="results">
+        <div class="container">
+            <div class="results-container">
+                <h3>Recommended Crop: <span id="recommendedCrop"></span></h3>
+                <p id="cropReason"></p>
+                <p><strong>Expected Yield:</strong> <span id="expectedYield"></span></p>
+                <p><strong>Planting Season:</strong> <span id="plantingSeason"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2023 Crop Mitra. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
